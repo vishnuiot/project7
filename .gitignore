@@ -1,6 +1,10 @@
 
 gitupload.sh
 test.txt
+/bin
+/include
+/lib
+/lib64
 # Prerequisites
 *.d
 
