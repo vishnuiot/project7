@@ -1,6 +1,10 @@
 
 gitupload.sh
 test.txt
+/bin
+/lib
+/lib64
+
 
 Skip to content
 Pull requests
