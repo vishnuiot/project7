@@ -2,3 +2,6 @@ python3 -m venv /path/to/new/virtual/environment
 # change to /bin 
 cd bin/
 source ./activate
+
+
+https://learnpython.com/blog/python-requirements-file/
