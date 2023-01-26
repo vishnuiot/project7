@@ -15,3 +15,5 @@ git push origin main
 
 # delete branch remotely
 # git push origin --delete initialfiles
+
+echo Folder_Name/ >> .gitignore
