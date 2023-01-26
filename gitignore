@@ -466,9 +466,9 @@ dmypy.json
 cython_debug/
 
 gitupload.sh
-test.txt
-/01.actualdropboxfiledownload.py
-/dbdetails.txt
+
+01.actualdropboxfiledownload.py
+dbdetails.txt
 /bin
 /lib
 /lib64
