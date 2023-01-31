@@ -1,3 +1,4 @@
+#https://psutil.readthedocs.io/en/latest/
 #!/usr/bin/env python
 import psutil
 # gives a single float value
@@ -16,3 +17,9 @@ mem_avail=psutil.virtual_memory().available * 100 / psutil.virtual_memory().tota
 print("CPU_RAM usage  = ",cpu_mem)
 print("CPU_usage = ",cpu_usage)
 print("available memory =",mem_avail)
+
+# from __future__ import print_function
+import psutil
+print("CPU percent=",psutil.cpu_percent())
+print(psutil.virtual_memory())  # physical memory usage
+print('memory % used:', psutil.virtual_memory()[2])
