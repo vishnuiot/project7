@@ -1,3 +1,6 @@
+Go to Influxdb website, download and install influxdb
+
+
 sudo service influxdb start
 sudo service influxdb status
 sudo service influxdb stop
