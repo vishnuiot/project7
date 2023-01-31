@@ -1,0 +1,3 @@
+sudo service influxdb start
+sudo service influxdb status
+sudo service influxdb stop
