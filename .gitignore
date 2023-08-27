@@ -1,2 +1,5 @@
+
 /.venv
 /token.txt
+/.pytest_cache
+/.vscode
