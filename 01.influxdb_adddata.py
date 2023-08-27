@@ -1,3 +1,4 @@
+#working demo code  -- Export token to connect
 import influxdb_client, os, time
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
@@ -14,8 +15,6 @@ client = influxdb_client.InfluxDBClient(
    org=org
 )
 write_api = client.write_api(write_options=SYNCHRONOUS)
-# p = influxdb_client.Point("my_measurement").tag("location", "Prague").field("temperature", 25.3)
-# write_api.write(bucket=bucket, org=org, record=p)
 
 for value in range(5):
   point = (
