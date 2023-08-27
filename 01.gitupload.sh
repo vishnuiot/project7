@@ -1,4 +1,6 @@
 #step 1: synchronize remote branch with local folder at the beginning of the day
+# Step 2: list git repo branches and then perform the necessary pull
+# git branch -a
 # git pull origin 01.influx_2023
 
 git add .
