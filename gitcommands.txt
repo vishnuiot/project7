@@ -1,0 +1,3 @@
+# Rename a local branch
+
+git branch -m 01.influx_2023
