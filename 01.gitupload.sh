@@ -6,6 +6,7 @@ git pull origin main
 git add .
 git commit -m "modification"
 git push origin main
+git pull origin main
 # git remote add origin git@github.com:vishnuiot/github_instructions
 #step 3 : git add and commit locally + remote
 # git add 
