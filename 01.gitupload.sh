@@ -1,4 +1,6 @@
-#step 1: synchronize remote branch with local folder 
+#step 1: synchronize remote branch with local folder at the beginning of the day
+# git pull origin 01.influx_2023
+
 git add .
 git commit -m "modification"
 git push origin 01.influx_2023
