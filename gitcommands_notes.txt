@@ -4,3 +4,6 @@ git branch -m 01.influx_2023
 
 # generate requirements.txt for python
 pip3 freeze > python_requirements.txt
+
+https://stackoverflow.com/questions/1519006/how-do-i-create-a-remote-git-branch
+
