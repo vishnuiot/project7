@@ -1,7 +1,7 @@
 #step 1: synchronize remote branch with local folder 
 git add .
 git commit -m "modification"
-
+git push origin 01.influx_2023
 
 
 
