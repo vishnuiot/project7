@@ -1,11 +1,13 @@
 #step 1: synchronize remote branch with local folder 
-# git remote add origin git@github.com:vishnuiot/project7
-# git pull origin main
+git add .
+git commit -m "modification"
+
+
+
 
 # git push --set-upstream <remote-name> <local-branch-name> 
 # # upload contents of local folder into remote repository
-# git add .
-# git commit -m "modification"
+
 # git push origin main
 # git pull origin main
 # git remote add origin git@github.com:vishnuiot/github_instructions
