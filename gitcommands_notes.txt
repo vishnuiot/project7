@@ -3,4 +3,4 @@
 git branch -m 01.influx_2023
 
 # generate requirements.txt for python
-pip3 freeze > requirements.txt
+pip3 freeze > python_requirements.txt
