@@ -1,5 +1,6 @@
 
 /.venv
+/.env
 /100.token.txt
 /101.environ.txt
 /.pytest_cache
