@@ -5,4 +5,8 @@ from(bucket: "training")
   |> filter(fn: (r) => r.sensor == "S2")  
   |> filter(fn: (r)=> r._value < 200)
 
-  remember to inject the filet fields
+  remember to inject the fields
+  variable v.timeRangeStart
+  variable v.timeRangeStop
+
+  
