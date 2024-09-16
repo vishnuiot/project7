@@ -1,7 +1,7 @@
 
 /.venv
 /.env
-/100.token.txt
+/100.token.txt.
 /101.environ.txt
 /102.telegraf_instructions.txt
 /.pytest_cache
