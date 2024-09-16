@@ -1,0 +1,5 @@
+
+telegraf: bucket: cpu_usage
+telegraf --config http://localhost:8086/api/v2/telegrafs/0d53130527f1a000 --debug
+
+export INFLUXDB_TOKEN=uOZ0nB_n0K9_x-y7Sthl-YTHdmmZzDR1Ege_-skCknCXFmZbiHKk_a89MHxm_XLIxTJ1sCWKuUldg0uuRYN3BQ==
