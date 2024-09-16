@@ -1,0 +1,13 @@
+HKpP7JYz4YOrbNZFMiMbTmVK1VipQVD2d6ByGyGlm1TLV_pFhWW1sVRwk8Gil-8049crmmgYNuS9Lgw2O3r83Q==
+
+HKpP7JYz4YOrbNZFMiMbTmVK1VipQVD2d6ByGyGlm1TLV_pFhWW1sVRwk8Gil-8049crmmgYNuS9Lgw2O3r83Q==
+
+
+
+
+
+telegraf: bucket: cpu_usage
+
+export INFLUXDB_TOKEN=uOZ0nB_n0K9_x-y7Sthl-YTHdmmZzDR1Ege_-skCknCXFmZbiHKk_a89MHxm_XLIxTJ1sCWKuUldg0uuRYN3BQ==
+
+telegraf --config http://localhost:8086/api/v2/telegrafs/0d53130527f1a000 --debug
