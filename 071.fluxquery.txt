@@ -1,0 +1,3 @@
+from(bucket: "CPU")
+  |> range(start: -15m, stop: now())
+  |> filter(fn: (r) => r._measurement == "Cpu_temperature")  
