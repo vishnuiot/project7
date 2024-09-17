@@ -4,4 +4,5 @@
 /.vscode
 /Influxdb_passkey
 /Influx_api_key
+export_api.sh
 
