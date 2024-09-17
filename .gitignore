@@ -3,4 +3,5 @@
 /.pytest_cache
 /.vscode
 /Influxdb_passkey
+/Influx_api_key
 
