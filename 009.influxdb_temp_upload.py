@@ -33,6 +33,11 @@ import influxdb_client, os, time
 from influxdb_client import InfluxDBClient, Point, WritePrecision
 from influxdb_client.client.write_api import SYNCHRONOUS
 
+from dotenv import load_dotenv
+import os
+load_dotenv('apikey.env')
+user = os.getenv('INFLUXDB_TOKEN')
+print (user)
 
 
 token = os.environ.get("INFLUXDB_TOKEN")

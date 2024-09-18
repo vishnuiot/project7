@@ -1,7 +1,9 @@
 # fruits = ["apple", "banana", "cherry"]
 # for x in fruits:
 #   print(x)
-  
-
-import subprocess
-subprocess.call(['bash', './export_api.sh'])
+    
+from dotenv import load_dotenv
+import os
+load_dotenv('apikey.env')
+user = os.getenv('INFLUXDB_TOKEN')
+print (user)

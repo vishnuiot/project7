@@ -5,4 +5,5 @@
 /Influxdb_passkey
 /Influx_api_key
 export_api.sh
+apikey.env
 
