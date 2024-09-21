@@ -24,6 +24,10 @@ print("core 3 temperature =",t["coretemp"][4][1])
 
 # conversion of tuple to integer
 core_0=int(t["coretemp"][1][1])
+core_1=int(t["coretemp"][2][1])
+core_2=int(t["coretemp"][3][1])
+core_3=int(t["coretemp"][4][1])
+
 print(type(core_0))
 
 
