@@ -42,21 +42,24 @@ load_dotenv('apikey.env')
 user = os.getenv('INFLUXDB_TOKEN')
 #print (user)  prints api token - pre production
 
-
 token = os.environ.get("INFLUXDB_TOKEN")
 org    = "Zurich"
 url    = "http://localhost:8086"
-bucket  ="CPU"
+bucket  ="CPU_onecore"
 
 client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
 write_api = client.write_api(write_options=SYNCHRONOUS)
-point = (Point("Cpu_temperature").tag("tagname1", "core1").field("core_0", core_0))
-write_api.write(bucket=bucket,org=org, record=point)
+for x in range(4):
+  point = (Point("Cpu_temperature").tag("tagname"+str(x), "core"+str(x)).field("core_"+str(x),"core_"+str(x)))
+  write_api.write(bucket=bucket,org=org, record=point)
+
+    # print (('core_'+str(x)))
+# point = (Point("Cpu_temperature").tag("tagname1", "core1").field("core_0", core_0))
 
 
 # print out the query back from InfluxdB
 query_api = client.query_api()
-query = """from(bucket: "CPU")
+query = """from(bucket: "CPU_onecore)")
  |> range(start: -10m)
  |> filter(fn: (r) => r._measurement == "Cpu_temperature")"""
 tables = query_api.query(query, org=org)

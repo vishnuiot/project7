@@ -52,7 +52,7 @@ client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
 write_api = client.write_api(write_options=SYNCHRONOUS)
 for x in range(4):
   point = (Point("Cpu_temperature").tag("tagname1", "core1").field("core_0", core_0))
-write_api.write(bucket=bucket, org=org, record=point)
+  write_api.write(bucket=bucket, org=org, record=point)
 
 
 # print out the query back from InfluxdB
