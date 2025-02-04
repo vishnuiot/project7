@@ -37,5 +37,6 @@ data = {
 
 #load data into a DataFrame object:
 df = pd.DataFrame(data)
-
 print(df) 
+# append data frame to CSV file
+df.to_csv('system_data.csv', mode='a', index=False, header=False)
