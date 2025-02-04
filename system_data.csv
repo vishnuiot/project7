@@ -1,3 +1,0 @@
-time,no_of_cores,RAM,cpu_1_usage,cpu_2_usage,cpu_3_usage,cpu_4_usage,cpu_5_usage,cpu_6_usage,cpu_7_usage,cpu_8_usage,cpu_1_temp,cpu_2_temp,cpu_3_temp,cpu_4_temp
-2025-02-04 20:21:34.887110,8,51.5,5.6,3.4,4.6,2.7,2.5,3.2,5.7,5.2,43,43,43,43
-2025-02-04 20:24:00.296212,8,54.3,4.8,4.0,3.7,3.5,3.0,3.5,3.3,4.6,46,46,46,46
