@@ -37,3 +37,5 @@ print("The type of memory={} ,cpu cores={}".format (memory_type,cpu_cores_type))
 
 for cores in range(1,5):
     print('The Independent CPU usage is: ', psutil.cpu_percent(cores))
+    
+    
