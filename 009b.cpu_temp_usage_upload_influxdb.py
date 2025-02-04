@@ -13,6 +13,7 @@ cpu_cores=os.cpu_count()
 print(memory,cpu_cores)
 memory_type=type(memory)
 cpu_cores_type=type(cpu_cores)
+cpu_core_usage_type=type(psutil.cpu_percent(1))
 print("The type of memory,cpu cores=",type(memory),type(cpu_cores))
 print("The type of memory={} ,cpu cores={}".format (memory_type,cpu_cores_type))
 
@@ -27,10 +28,13 @@ print("core 2 temperature =",t["coretemp"][3][1])
 print("core 3 temperature =",t["coretemp"][4][1])
 temperature_type=type(t["coretemp"][1][1])
 
+for cores in range(1,5):
+    print('The Independent CPU usage is: ', psutil.cpu_percent(cores))
+
 
 print("The type of memory,cpu cores=",type(memory),type(cpu_cores))
 print("The type of memory={} ,cpu cores={}".format (memory_type,cpu_cores_type))
-print("The type of memory={} ,cpu cores={} ,temperature={}".format (memory_type,cpu_cores_type,temperature_type))
+print("Data type= memory={} ,cpu cores={} ,temperature={},cpu_usage 1(4)={}".format (memory_type,cpu_cores_type,temperature_type,cpu_core_usage_type))
 
 
 #Influxdb Section to upload CPU,Temp
