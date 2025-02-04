@@ -6,5 +6,5 @@
 /Influx_api_key
 export_api.sh
 apikey.env
-/.csv
+*.csv
 
