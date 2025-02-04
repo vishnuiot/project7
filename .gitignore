@@ -7,4 +7,5 @@
 export_api.sh
 apikey.env
 *.csv
+/Influxdb_telegraf_passkey
 

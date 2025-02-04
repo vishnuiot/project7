@@ -32,3 +32,24 @@ df = pd.DataFrame(data)
 print(df) 
 # append data frame to CSV file
 df.to_csv('system_data.csv', mode='a', index=False, header=False)
+
+#Influxdb Section to upload CPU,Temp
+import influxdb_client, os, time
+from influxdb_client import InfluxDBClient, Point, WritePrecision
+from influxdb_client.client.write_api import SYNCHRONOUS
+# Section to load token
+from dotenv import load_dotenv
+import os
+load_dotenv('apikey.env')
+user = os.getenv('INFLUXDB_TOKEN')
+#print (user)  prints api token - pre production
+
+token = os.environ.get("INFLUXDB_TOKEN")
+org = "zurich"
+url = "http://localhost:8086"
+bucket="cpu"
+
+
+# write_api = client.write_api(write_options=SYNCHRONOUS)
+# write_api.write(bucket=bucket, org="zurich", record=point)
+# time.sleep(5) # separate points by 1 second
