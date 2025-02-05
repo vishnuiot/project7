@@ -7,50 +7,68 @@ print(now)
 t=psutil.sensors_temperatures()  # Temp tuple to be converted to integer
 data = {
   "time":now ,
-  "no_of_cores": [os.cpu_count()],
-  "RAM"        : [psutil.virtual_memory()[2]]
-  # "cpu_1_usage": [psutil.cpu_percent(1)],
-  # "cpu_2_usage": [psutil.cpu_percent(2)],
-  # "cpu_3_usage": [psutil.cpu_percent(3)],
-  # "cpu_4_usage": [psutil.cpu_percent(4)],
-  # "cpu_5_usage": [psutil.cpu_percent(5)],
-  # "cpu_6_usage": [psutil.cpu_percent(6)],
-  # "cpu_7_usage": [psutil.cpu_percent(7)],
-  # "cpu_8_usage": [psutil.cpu_percent(8)],
-  # "cpu_1_temp" : [int(t["coretemp"][1][1])],
-  # "cpu_2_temp" : [int(t["coretemp"][1][1])],
-  # "cpu_3_temp" : [int(t["coretemp"][1][1])],
-  # "cpu_4_temp" : [int(t["coretemp"][1][1])]
+  "no_of_cores": os.cpu_count(),
+  "RAM"        : psutil.virtual_memory()[2],
+  "cpu_1_usage": psutil.cpu_percent(1),
+  "cpu_2_usage": psutil.cpu_percent(2),
+  "cpu_3_usage": psutil.cpu_percent(3),
+  "cpu_4_usage": psutil.cpu_percent(4),
+  "cpu_5_usage": psutil.cpu_percent(5),
+  "cpu_6_usage": psutil.cpu_percent(6),
+  "cpu_7_usage": psutil.cpu_percent(7),
+  "cpu_8_usage": psutil.cpu_percent(8),
+  "cpu_1_temp" : int(t["coretemp"][1][1]),
+  "cpu_2_temp" : int(t["coretemp"][1][1]),
+  "cpu_3_temp" : int(t["coretemp"][1][1]),
+  "cpu_4_temp" : int(t["coretemp"][1][1])
       }
-check=list(data.keys()) #list data from the set data
-print (check)
-vvv=list(data.values())
-print(vvv)
-print(len(data))
 
-xxx={'tags':list(data)}
-print(xxx)
-print (type(data))
+#load raw data into a DataFrame object for saving as csv:
+df = pd.DataFrame(data)
+print(df) 
+# append data frame to CSV file
+df.to_csv('system_data.csv', mode='a', index=False, header=False)
 
+
+# # check=list(data.keys()) #list data from the set data
+# # print (check)
+# # vvv=list(data.values()) #list values from the set data
+# # print(vvv)
+# data_for_influxdb={'value':list(data.values()),'tag1':list(data.keys())}
+# print(data_for_influxdb)
 
 # #load data into a DataFrame object:
-# df = pd.DataFrame(data)
+# df = pd.DataFrame(data_for_influxdb)
 # print(df) 
 # # append data frame to CSV file
 # df.to_csv('system_data.csv', mode='a', index=False, header=False)
-# # prepare data for ingestion into influxdb
-# #Invert data
-# # data ={'value':[10,20],'tag1':['a','b']}
-# empty = [] # Create an Empty list
-# # Create an initialized list
-# print(data)
-# # points=[]
-# # for index,row in df.iterrows():
-# #   point={'measurement':'cpu_parameters','tags':{'tag1':row['tag1']},'time':None,'fields':{'value':row['value'] }}
-# #   points.append(point)
+# # # prepare data for ingestion into influxdb
 
-# data ={'value':[now,[os.cpu_count()]],'Measurement_parameters':['time','no_of_cores']}
-# df = pd.DataFrame(data)
-# print(df)
+# points=[]
+# for index,row in df.iterrows():
+#   point={'measurement':'cpu_parameters','tags':{'tag1':row['tag1']},'time':None,'fields':{'value':row['value'] }}
+#   points.append(point)
+#   # Influxdb Section to upload CPU,Temp
+#   import influxdb_client, os, time
+#   from influxdb_client import InfluxDBClient, Point, WritePrecision
+#   from influxdb_client.client.write_api import SYNCHRONOUS
+#   # Section to load token
+#   from dotenv import load_dotenv
+#   import os
+#   load_dotenv('apikey.env')
+#   user = os.getenv('INFLUXDB_TOKEN')
+#   #print (user)  prints api token - pre production
 
-# check=list
+#   token = os.environ.get("INFLUXDB_TOKEN")
+#   org = "zurich"
+#   url = "http://localhost:8086"
+#   bucket="dongle"
+
+#   client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
+#   write_api = client.write_api(write_options=SYNCHRONOUS)
+#   write_api.write(bucket=bucket, org="zurich", record=point)
+#   time.sleep(1) # separate points by 1 second
+
+
+
+
