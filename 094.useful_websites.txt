@@ -1,3 +1,7 @@
 # method to set environment variables from python
 https://www.twilio.com/en-us/blog/environment-variables-python
 
+Write pandas dataframe into influxdb
+
+https://www.youtube.com/watch?v=Ow9PtjxVObo
+

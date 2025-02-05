@@ -47,9 +47,14 @@ user = os.getenv('INFLUXDB_TOKEN')
 token = os.environ.get("INFLUXDB_TOKEN")
 org = "zurich"
 url = "http://localhost:8086"
-bucket="cpu"
+bucket="db"
+
+client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
+write_api = client.write_api(write_options=SYNCHRONOUS)
+
+point = (Point("cpu_parameters").tag("memorytag", "memorytagvalue").field("cpumemoryvalue",df))
 
 
-# write_api = client.write_api(write_options=SYNCHRONOUS)
-# write_api.write(bucket=bucket, org="zurich", record=point)
-# time.sleep(5) # separate points by 1 second
+write_api = client.write_api(write_options=SYNCHRONOUS)
+write_api.write(bucket=bucket, org="zurich", record=point)
+time.sleep(10) # separate points by 1 second

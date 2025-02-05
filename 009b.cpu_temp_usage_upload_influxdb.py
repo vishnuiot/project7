@@ -55,7 +55,6 @@ url = "http://localhost:8086"
 bucket="cpu"
 
 client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
-write_api = client.write_api(write_options=SYNCHRONOUS)
 
 point = (Point("cpu_parameters").tag("memorytag", "memorytagvalue").field("cpumemoryvalue",memory))
 point = (Point("cpu_parameters").tag("corestag", "corestagvalue").field("corecountvalue",cpu_cores))
@@ -67,5 +66,5 @@ point = (Point("cpu_parameters").tag("coretemp4tag", "coretemp4tagvalue").field(
 
 write_api = client.write_api(write_options=SYNCHRONOUS)
 write_api.write(bucket=bucket, org="zurich", record=point)
-time.sleep(5) # separate points by 1 second
+time.sleep(1) # separate points by 1 second
 
