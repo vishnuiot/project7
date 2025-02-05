@@ -5,3 +5,6 @@ Write pandas dataframe into influxdb
 
 https://www.youtube.com/watch?v=Ow9PtjxVObo
 
+dictionary to list
+https://stackoverflow.com/questions/1679384/converting-dictionary-to-list
+

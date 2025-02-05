@@ -1,6 +1,6 @@
 import pandas as pd
 
-data ={'value':[10,20],'tag1':['a','b'],'tag2':['x','y']}
+data ={'value':[10,20],'tag1':['a','b']}
 df = pd.DataFrame(data)
 print(df)
 points=[]
