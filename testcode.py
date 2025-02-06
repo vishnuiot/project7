@@ -28,11 +28,14 @@ print(df)
 # df.to_csv('system_data.csv', mode='a', index=False, header=False)
 
 # process data for ingestion into influxdB
+idf=df.drop(['time'],axis=1)
+lii=idf.values.tolist()
+print (lii)
 
-check=list(data.keys()) #list data from the set data
-print (check)
-vvv=list(data.values()) #list values from the set data
-print(vvv)
+# check=list(idf.keys()) #list data from the set data
+# print (check)
+# vvv=list(idf.values()) #list values from the set data
+# print(vvv)
 
 # # check=list(data.keys()) #list data from the set data
 # # print (check)
