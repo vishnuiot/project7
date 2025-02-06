@@ -1,5 +1,9 @@
+#!/usr/bin/env python
+
 from datetime import datetime
 import pandas as pd,os,psutil,numpy as np
+
+
 # datetime object containing current date and time
 now = datetime.now()             # Time for recording into data frame
 t=psutil.sensors_temperatures()  # Temp tuple to be converted to integer
@@ -24,28 +28,28 @@ data = {
 #load raw data into a DataFrame object for saving as csv:Data can be passed only as a list
 df = pd.DataFrame(data)
 print(df) 
-# # append data frame to CSV file
-# df.to_csv('system_data.csv', mode='a', index=False, header=False)
+# append data frame to CSV file
+df.to_csv('system_data.csv', mode='a', index=False, header=True)# Change header =False if header is not required
 
 # process data for ingestion into influxdB
 influxdb_df=df.drop(['time'],axis=1)
-print(influxdb_df)
+# print(influxdb_df)
 tag1=list(influxdb_df.keys())
-print(tag1)
-print(type(tag1))
-print(len(tag1))
+# print(tag1)
+# print(type(tag1))
+# print(len(tag1))
 
 
 value=influxdb_df.values.tolist()
 value = np.array(value)
 value=value.flatten().tolist()
-print (value)
-print(type(value))
-print(len(value))
+# print (value)
+# print(type(value))
+# print(len(value))
 
 
 data_for_influxdb={'value':value,'tag1':tag1}
-print(data_for_influxdb)
+# print(data_for_influxdb)
 df = pd.DataFrame(data_for_influxdb)
 print(df)
 
