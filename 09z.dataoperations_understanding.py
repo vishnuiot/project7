@@ -36,20 +36,26 @@ print(type(tag1))
 print(len(tag1))
 
 
+
 value=influxdb_df.values.tolist()
-a = np.array(value)
-a=a.flatten().tolist()
-print (a)
-# print(value)
-print(type(a))
-print(len(a))
+value = np.array(value)
+value=value.flatten().tolist()
+print (value)
+print(type(value))
+print(len(value))
 
 
-# check={'value':value,'tag1':tag1}
+check={'value':value,'tag1':tag1}
+print(check)
 
 
-data ={'value':[10,20],'tag1':['a','b']}
-df = pd.DataFrame(data)
+# data ={'value':[10,20],'tag1':['a','b']}
+# df = pd.DataFrame(data)
+# print(df)
+
+data_for_influxdb={'value':value,'tag1':tag1}
+print(data_for_influxdb)
+df = pd.DataFrame(data_for_influxdb)
 print(df)
 
 
