@@ -1,4 +1,4 @@
-#!/usr/bin/env python3
+#! /home/vishnu/Documents/influxdb_files/.venv/bin/python
 
 from datetime import datetime
 import pandas as pd,os,psutil,numpy as np
@@ -76,7 +76,7 @@ for index,row in df.iterrows():
   client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
   write_api = client.write_api(write_options=SYNCHRONOUS)
   write_api.write(bucket=bucket, org="zurich", record=point)
-  time.sleep(1) # separate points by 1 second
+  # time.sleep() # separate points by 1 second
 
 
 
