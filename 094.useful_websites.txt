@@ -6,6 +6,9 @@ https://www.twilio.com/en-us/blog/environment-variables-python
 Write pandas dataframe into influxdb
 
 https://www.youtube.com/watch?v=Ow9PtjxVObo
+Export key to ~/.bashrc for crontab
+
+https://community.influxdata.com/t/python-influxdb-bucket-connection/25874/3
 
 dictionary to list
 https://stackoverflow.com/questions/1679384/converting-dictionary-to-list
