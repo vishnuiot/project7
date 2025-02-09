@@ -8,6 +8,7 @@ os.system("sudo apt-get remove --auto-remove grafana -y && sudo apt-get purge --
 time.sleep(1)
 print('------------------------------------')
 print('...Cleaning Up...\n\n')
+
 os.system("sudo apt-get autoclean && sudo apt-get autoremove")
 time.sleep(1)
 print('------------------------------------')
