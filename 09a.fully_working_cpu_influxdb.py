@@ -1,4 +1,5 @@
 #! /home/vishnu/Documents/influxdb_files/.venv/bin/python
+# nano ~/.bashrc and export influxdb token export INFLUXDB_TOKEN=""
 
 from datetime import datetime
 import pandas as pd,os,psutil,numpy as np
