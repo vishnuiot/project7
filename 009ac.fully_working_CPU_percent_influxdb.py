@@ -1,4 +1,4 @@
-#!/home/vishnu/Documents/influxdb_files/.venv/bin/python
+#!/home/vishnu/Documents/influxdb_files/.venv
 from datetime import datetime
 import pandas as pd,os,psutil,numpy as np
 # Important to specify working directory in os.chdir
@@ -11,15 +11,15 @@ t=psutil.sensors_temperatures()  # Temp tuple to be converted to integer
 data = {
   "time":now ,
 #   "no_of_cores": [os.cpu_count()],
-  "RAM"        : [psutil.virtual_memory()[2]],
-#   "cpu_1_usage": [psutil.cpu_percent(1)],
-#   "cpu_2_usage": [psutil.cpu_percent(2)],
-#   "cpu_3_usage": [psutil.cpu_percent(3)],
-#   "cpu_4_usage": [psutil.cpu_percent(4)],
-#   "cpu_5_usage": [psutil.cpu_percent(5)],
-#   "cpu_6_usage": [psutil.cpu_percent(6)],
-#   "cpu_7_usage": [psutil.cpu_percent(7)],
-#   "cpu_8_usage": [psutil.cpu_percent(8)],
+#   "RAM"        : [psutil.virtual_memory()[2]],
+  "cpu_1_usage": [psutil.cpu_percent(1)],
+  "cpu_2_usage": [psutil.cpu_percent(2)],
+  "cpu_3_usage": [psutil.cpu_percent(3)],
+  "cpu_4_usage": [psutil.cpu_percent(4)],
+  "cpu_5_usage": [psutil.cpu_percent(5)],
+  "cpu_6_usage": [psutil.cpu_percent(6)],
+  "cpu_7_usage": [psutil.cpu_percent(7)],
+  "cpu_8_usage": [psutil.cpu_percent(8)],
 #   "cpu_1_temp" : [int(t["coretemp"][1][1])],
 #   "cpu_2_temp" : [int(t["coretemp"][1][1])],
 #   "cpu_3_temp" : [int(t["coretemp"][1][1])],
