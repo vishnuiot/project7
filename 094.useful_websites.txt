@@ -13,3 +13,6 @@ https://community.influxdata.com/t/python-influxdb-bucket-connection/25874/3
 dictionary to list
 https://stackoverflow.com/questions/1679384/converting-dictionary-to-list
 
+# Git hub video
+https://www.youtube.com/watch?v=lYiE5lBS13E
+
