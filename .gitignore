@@ -4,8 +4,8 @@
 /.vscode
 /Influxdb_passkey
 /Influx_api_key
-export_api.sh
-apikey.env
+/export_api.sh
+/apikey.env
 *.csv
 /Influxdb_grafana_passkey
 

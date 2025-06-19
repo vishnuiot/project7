@@ -70,9 +70,9 @@ for index,row in df.iterrows():
   #print (user)  prints api token - pre production
 
   token = os.environ.get("INFLUXDB_TOKEN")
-  org = "zurich"
+  org = "IoT_Projects"
   url = "http://localhost:8086"
-  bucket="cpu"
+  bucket="001.cpu_parameters"
 
   client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
   write_api = client.write_api(write_options=SYNCHRONOUS)
