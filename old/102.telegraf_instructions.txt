@@ -1,5 +1,0 @@
-dpkg -l telegraf influxdb2
-
-which telegraf
-
-telegraf --sample-config --input-filter cpu:mem --output-filter influxdb_v2 > telegraf.conf
