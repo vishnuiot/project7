@@ -1,13 +1,10 @@
-#!/home/vishnu/Documents/influxdb_files/.venv/bin/python
-# #!/usr/bin/python3
-# # This script collects CPU parameters and uploads them to InfluxDB
-# # It also saves the data to a CSV file for backup purposes
+#!/usr/bin/env python3
+# This script collects CPU parameters and uploads them to InfluxDB
+# It also saves the data to a CSV file for backup purposes
 from datetime import datetime
 import pandas as pd,os,psutil,numpy as np
 # Important to specify working directory in os.chdir
 os.chdir("/home/vishnu/Documents/002.influxdb_docker/project7_CPU_parameters")
-
-
 
 # datetime object containing current date and time
 now = datetime.now()             # Time for recording into data frame
