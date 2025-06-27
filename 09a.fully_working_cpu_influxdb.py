@@ -2,7 +2,8 @@
 from datetime import datetime
 import pandas as pd,os,psutil,numpy as np
 # Important to specify working directory in os.chdir
-os.chdir("/home/vishnu/Documents/influxdb_files")
+os.chdir("/home/vishnu/Documents/002.influxdb_docker/project7_CPU_parameters")
+
 
 
 # datetime object containing current date and time
@@ -76,7 +77,7 @@ for index,row in df.iterrows():
 
   client = influxdb_client.InfluxDBClient(url=url, token=token, org=org)
   write_api = client.write_api(write_options=SYNCHRONOUS)
-  write_api.write(bucket=bucket, org="zurich", record=point)
+  write_api.write(bucket=bucket, org="IoT_Projects", record=point)
   # time.sleep() # separate points by 1 second
 
 
