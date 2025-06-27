@@ -1,5 +1,4 @@
-#!/home/vishnu/Documents/influxdb_files/.venv/bin/python
-# #!/usr/bin/python3
+#!/usr/bin/env python3
 # # This script collects CPU parameters and uploads them to InfluxDB
 # # It also saves the data to a CSV file for backup purposes
 from datetime import datetime

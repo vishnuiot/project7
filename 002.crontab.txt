@@ -2,7 +2,8 @@
 echo $VIRTUAL_ENV
 #step 2 convert .py file into executable
 chmod +x 001c.cpu_influxdb_june_2025.py
+# step 3 create a cronjob
 
-*/1 * * * * /usr/bin/python /home/vishnu/Documents/influxdb_files/09a.fully_working_cpu_influxdb.py
+*/1 * * * * /home/vishnu/Documents/002.influxdb_docker/project7_CPU_parameters/.venv/bin/python /home/vishnu/Documents/002.influxdb_docker/project7_CPU_parameters/001c.cpu_influxdb_june_2025.py
 
-*/1 * * * * /usr/bin/python /home/vishnu/Documents/002.influxdb_docker/project7_CPU_parameters/001c.cpu_influxdb_june_2025.py
+ */1 * * * * /home/vishnu/Documents/002.influxdb_docker/project7_CPU_parameters/.venv/bin/python /home/vishnu/Documents/002.influxdb_docker/project7_CPU_para>
